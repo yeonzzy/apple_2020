@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*header 부분*/
+.header{
+    width: 100%;
+    height: auto;
+    background: #333;
+    position: fixed;
+}
+
+.header .inner-header{
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header .inner-header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header .inner-header h1.logo{
+    width: 11.1111%;
+    float: left;
+    height: 44px;
+}
+
+.header .inner-header h1.logo img{
+    width: 20px;
+    display: block;
+    margin: 11px auto 0;
+}
+
+.header .inner-header span.menu{
+    width: 11.1111%;
+    float: left;
+    display: none;
+}
+
+.header .inner-header span.menu img{
+    width: 20px;
+    display: block;
+    margin: 11px auto 0;
+}
+
+.header .inner-header .gnb{
+    width: 77.7777%;
+    height: auto;
+    float: left;
+}
+
+.header .inner-header .gnb >ul >li{
+    width: 14.2857%;
+    line-height: 44px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+
+.header .inner-header .gnb >ul >li img{
+    width: 18px;
+    display: block;
+    margin: 12px auto 0;
+}
+
+.header .inner-header .gnb >ul >li a{
+    color: #d6d6d6;
+}
+
+.header .inner-header .gnb >ul >li a:hover{
+    color: #fff;
+}
+
+.header .inner-header span.cart{
+    width: 11.1111%;
+    height: 44px;
+    float: left;
+}
+
+.header .inner-header span.cart img{
+    width: 20px;
+    margin: 11px auto 0;
+    display: block;
+}
