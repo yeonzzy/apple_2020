@@ -52,6 +52,19 @@
     font-weight: bold;
 }
 
+.container .inner-container .section span.pointTxt{
+    line-height: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2997d9;
+    padding: 0 10px;
+}
+
+.container .inner-container .section span.pointTxt:hover{
+    text-decoration: underline;
+}
+
 /*container : section2*/
 .container .inner-container .section.sec2{
     width: 100%;
@@ -68,6 +81,7 @@
     color: #fff; 
     padding-top: 60px;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .container .inner-container .section.sec2 .secCon.sec2Txt >h5{
@@ -81,15 +95,6 @@
     font-weight: 300;
     font-size: 14px;
     color: #868678;
-}
-
-.container .inner-container .section.sec2 .secCon.sec2Txt span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 16px;
-    font-weight: 600;
-    color: #2997d9;
-    padding: 0 10px;
 }
 
 /*container : section3*/
@@ -110,6 +115,7 @@
     color: #000; 
     padding-top: 60px;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .container .inner-container .section.sec3 .secCon.sec3Txt >h5{
@@ -125,15 +131,6 @@
     color: #868678;
 }
 
-.container .inner-container .section.sec3 .secCon.sec3Txt span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 16px;
-    font-weight: 600;
-    color: #2997d9;
-    padding: 0 10px;
-}
-
 /*container : section4*/
 .container .inner-container .section.sec4{
     width: 100%;
@@ -142,6 +139,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
+    cursor: pointer;
 }
 
 .container .inner-container .section.sec4 .secCon.sec4Txt{
@@ -160,17 +158,18 @@
     font-size: 25px;
 }
 
-.container .inner-container .section.sec4 .secCon.sec4Txt span.pointTxt{
+/*container : section5*/
+.container .inner-container .section.sec5 span.pointTxt{
     line-height: 40px;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #2997d9;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 
-/*container : section5*/
 .container .inner-container .section.sec5{
     width: 100%;
     height: auto;
@@ -191,7 +190,6 @@
     display: inline;
     margin: 0.3%;
 }
-
 
 /*container : section5 : 1번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(1){
@@ -222,15 +220,6 @@
     font-weight: 300;
     font-size: 14px;
     color: #868678;
-}
-
-.container .inner-container .section.sec5 .sec5-01 span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997d9;
-    padding: 0 10px;
 }
 
 /*container : section5 : 2번*/
@@ -269,14 +258,6 @@
     color: #fff;
 }
 
-.container .inner-container .section.sec5 .sec5-02 span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997d9;
-}
-
 /*container : section5 : 3번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(3){
     background: url(../img/section5_bg03.jpg) no-repeat 50%;
@@ -313,16 +294,6 @@
     color: #000;
 }
 
-.container .inner-container .section.sec5 .sec5-03 span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997d9;
-    padding: 0 10px;
-}
-
-
 /*container : section5 : 4번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(4){
     background: url(../img/section5_bg04.jpg) no-repeat 50%;
@@ -345,14 +316,6 @@
     font-weight: 500;
     font-size: 18px;
     color: #fff;
-}
-
-.container .inner-container .section.sec5 .sec5-04 span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997d9;
 }
 
 /*container : section5 : 5번*/
@@ -407,7 +370,6 @@
     color: #000; 
     padding-top: 60px;
     font-size: 40px;
-
 }
 
 .container .inner-container .section.sec5 .sec5-06 >h6{
@@ -417,35 +379,11 @@
     color: #000;
 }
 
-.container .inner-container .section.sec5 .sec5-06 span.pointTxt{
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997d9;
-    padding: 0 10px;
-}
-
-
-
-
-
-@media only screen and (min-width:768px) and (max-width:1023px){
-    
-}
-
 @media only screen and (max-width:767px) {
-/*
-    .header .inner-header::after{
-        content: "";
-        display: block;
-        clear: both;
-    }
-*/
     .header .inner-header{
         position: relative;
     }
-    .header .inner-header span.menu{
+    .header .inner-header .menu{
         display: block;
     }
     
@@ -467,6 +405,10 @@
         -ms-transition:all 0.5s;
         -o-transition:all 0.5s;
     }
+
+    .container .inner-container .section span.pointTxt{
+        font-size: 12px;
+    }
     
     .container .inner-container .section.sec2{
         background: url(../img/section2-1_bg.jpg) no-repeat 50%;
@@ -486,7 +428,7 @@
         font-weight: 300;
         font-size: 12px;
         color: #868678;
-    }   
+    } 
     
     .container .inner-container .section.sec3{
         background: url(../img/section3-1_bg.jpg) no-repeat 50%;
@@ -498,7 +440,7 @@
     }
 
     .container .inner-container .section.sec3 .secCon.sec3Txt >h5{
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .container .inner-container .section.sec3 .secCon.sec3Txt >h6{
@@ -506,7 +448,8 @@
     }
  
     .container .inner-container .section.sec4{
-        background: url(../img/section4-1_bg.jpg) no-repeat 50%;
+        background: url(../img/section4-1_bg.jpg) no-repeat;
+        background-position: center;
         background-size: cover;
     }
 
@@ -516,19 +459,28 @@
     }
 
     .container .inner-container .section.sec4 .secCon.sec4Txt >h5{
-        font-size: 16px;
+        font-size: 13px;
     }
 
-    
-    
-    
-    
-    
     .container .inner-container .section.sec5 >ul >li{
         width: 100%;
         margin: 5px 0;
     }
 
+    .container .inner-container .section.sec5 .sec5-01  >h5{
+        font-size: 16px;
+    }
 
+    .container .inner-container .section.sec5 .sec5-02  >h5{
+        font-size: 14px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .container .inner-container .section.sec5 .sec5-04 >h6{
+        font-size: 16px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 
 }

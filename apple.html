@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/commons/jquery-3.5.1.min.js"></script>
     <title>apple (대한민국)</title>
     <link rel="stylesheet" href="css/apple.css">
     <link rel="stylesheet" href="css/commons/reset.css">
@@ -16,7 +17,34 @@
                         <img src="img/logo.png" alt="logo">
                     </a>
                 </h1>
-                <span class="menu"><img src="img/gnb-menu.png" alt="menu"></span>
+                <div class="menu">
+                    <!-- <canvas id="menuCanvas" width="20" height="10"></canvas>
+                     -->
+                     <div class="menu-trigger">
+                        <span></span>
+                        <span></span>
+                     </div>
+                </div>
+                <!-- <div class="menuBox">
+                    <div class="inner-menuBox">
+                        <ul>
+                            <li>Mac</li>
+                            <li>iPad</li>
+                            <li>iPhone</li>
+                            <li>Watch</li>
+                            <li>TV</li>
+                            <li>Music</li>
+                            <li>Support</li>
+                        </ul>
+                    </div>
+                </div> -->
+                <script>
+                    $('.menu-trigger').on('click', menuIconFunc);
+                    function menuIconFunc(){
+                        $(this).toggleClass('active');
+                    }
+                </script>
+
                 <div class="gnb">
                     <ul>
                         <li><a href="#">Mac</a></li>
@@ -25,10 +53,9 @@
                         <li><a href="#">Watch</a></li>
                         <li><a href="#">Music</a></li>
                         <li><a href="#">고객지원</a></li>
-                        <li>
-                            <a href="#">
-                                <img src="img/gnb-search.png" alt="search">
-                            </a></li>
+                        <li class="search">
+                            <img src="img/gnb-search.png" alt="search">
+                        </li>
                     </ul>
                 </div>
                 <span class="cart">
@@ -37,7 +64,66 @@
                     </a>
                  </span>
             </div>
+            <div class="search-area">
+                <div class="inner-area">
+                    <input type="text" name="search" id="search" placeholder="Search apple.com">
+                    <div class="search-close-btn">
+                        <span class="search-close"></span>
+                        <span class="search-close"></span>
+                    </div>
+                    <div class="search-menu">
+                        <ul>
+                            <li class="quick">빠른 링크</li>
+                            <li class="s-menu">
+                                <a href="#none">Apple Store 임시 휴무 관련 자주하는 질문</a>
+                            </li>
+                            <li class="s-menu">
+                                <a href="#none">매장찾기</a>
+                            </li>
+                            <li class="s-menu">
+                                <a href="#none">Apple Store Online에서 쇼핑하기</a>
+                            </li>
+                            <li class="s-menu">
+                                <a href="#none">액세사리</a>
+                            </li>
+                            <li class="s-menu">
+                                <a href="#none">AirPods</a>
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script>
+            //searchBtn 클릭시
+            var search_Btn=document.getElementsByClassName('search')[0];
+            var search_Area=document.getElementsByClassName('search-area')[0];
+            var search_innerArea=document.getElementsByClassName('inner-area')[0];
+            var header=document.getElementsByClassName('header')[0];
+            var span_cart=document.querySelector('span.cart');
+            var h1_logo=document.querySelector('h1.logo');
+            var gnb=document.getElementsByClassName('gnb')[0];
+
+            search_Btn.addEventListener('click', searchFunc);
+            function searchFunc(){
+                search_Area.style.opacity='1';
+                search_innerArea.style.right='50%';
+                header.style.background='#000';
+                span_cart.style.opacity='0';
+                h1_logo.style.opacity='0';
+                gnb.style.opacity='0';
+            }
+            var search_close=document.getElementsByClassName('search-close-btn')[0];
+            search_close.addEventListener('click',searchCloseFunc);
+            function searchCloseFunc(){
+                search_Area.style.opacity='0';
+                search_innerArea.style.right='-100%';
+                header.style.background='#333';
+                span_cart.style.opacity='1';
+                h1_logo.style.opacity='1';
+                gnb.style.opacity='1';
+            }
+        </script>
         <div class="container">
            <div class="inner-container">
             <div class="section sec1">
