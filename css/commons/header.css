@@ -6,7 +6,10 @@
     height: auto;
     background: #333;
     position: fixed;
-    transition: ease-in-out 2.0s;
+    z-index: 1;
+    top:0;
+    left: 0;
+    transition: ease-in-out 1.0s;
 }
 
 .header .inner-header{
@@ -39,6 +42,7 @@
     width: 11.1111%;
     float: left;
     display: none;
+    cursor: pointer;
 }
 
 /* .header .inner-header .menu >canvas{
@@ -86,6 +90,111 @@
     transform : translateY(-4.5px) rotate(45deg);
 }
 
+.menuBox{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 10;
+}
+
+.menuBox-search{
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(110,110,115);
+}
+
+.menuBox-search >input{
+    width: 95%;
+    height: 36px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #1d1d1f ;
+    background-image: url(../../img/gnb-search.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 14px;
+    padding: 0 0 0 35px;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+}
+
+.menuBox-search span.cancle{
+    width: 18%;
+    position: absolute;
+    right: 0;
+    line-height: 36px;
+    color: #2997ff;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+    border: 0px solid #fff;
+    cursor: pointer;
+}
+
+.menuBox .inner-menuBox{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    position: absolute;
+    display: none;
+}
+
+.menuBox .inner-menuBox >ul >li{
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: #bfbfbf;
+    border-bottom: 1px solid rgb(110,110,115);
+    font-weight: 100;
+}
+
+.menuBox .inner-menuBox >ul >li:nth-child(7){
+    border-bottom: 0;
+}
+
+.menuBox .inner-searchBox{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    position: absolute;
+    display: none;
+}
+
+.on{
+    display: block !important;
+}
+
+.menuBox .inner-searchBox >ul >li{
+    width: 100%;
+    line-height: 40px;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 1px solid rgb(110,110,115);
+    font-weight: 500;
+}
+
+.menuBox .inner-searchBox >ul >li.i-quick{
+    border-bottom: 0;
+    color: #bfbfbf;
+    font-size: 11px;
+}
+
+.menuBox .inner-searchBox >ul >li:nth-child(6){
+    border-bottom: 0;
+}
+
 
 .header .inner-header .gnb{
     width: 77.7777%;
@@ -117,13 +226,14 @@
     color: #fff;
 }
 
+/*search 부분!!!!!!!!!!!!!!!1111*/
 .header .search-area{
     position: fixed;
     width: 100%;
     height: 100%;
     background: #0009;
-    opacity: 0;
-    transition: ease-in-out 1.0s;
+    display: none;
+    /* transition: ease-in-out 1.0s; */
 }
 
 .header .search-area .inner-area{
@@ -134,9 +244,9 @@
     top: 0;
     right: -100%;
     margin-right: -490px;
-    transition: ease-in-out 2.0s;
     padding: 0 100px;
     box-sizing: border-box;
+    transition: ease-in-out 1.0s;
 }
 
 .header .search-area .inner-area input{
@@ -223,7 +333,8 @@
     width: 11.1111%;
     height: 44px;
     float: left;
-    transition: ease-in-out 2.0s
+    transition: ease-in-out 2.0s;
+    display: block;
 }
 
 .header .inner-header span.cart img{

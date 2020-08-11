@@ -25,7 +25,11 @@
                         <span></span>
                      </div>
                 </div>
-                <!-- <div class="menuBox">
+                <div class="menuBox">
+                    <div class="menuBox-search">
+                        <input type="text" name="menuBox-search" id="menuBox-search" placeholder="apple.com 검색">
+                        <span class="cancle">취소</span>
+                    </div>
                     <div class="inner-menuBox">
                         <ul>
                             <li>Mac</li>
@@ -34,15 +38,60 @@
                             <li>Watch</li>
                             <li>TV</li>
                             <li>Music</li>
-                            <li>Support</li>
+                            <li>고객지원</li>
                         </ul>
                     </div>
-                </div> -->
+                    <div class="inner-searchBox">
+                        <ul>
+                            <li class="i-quick">빠른링크</li>
+                            <li>Apple Store 임시 휴무 관련 자주하는 질문</li>
+                            <li>매장찾기</li>
+                            <li>Apple Store Online에서 쇼핑하기</li>
+                            <li>액세사리</li>
+                            <li>AirPods</li>
+                        </ul>
+                    </div>
+                </div>
                 <script>
+
+                    //모바일사이즈 menuToggle 제어
+                    var idx=0;
                     $('.menu-trigger').on('click', menuIconFunc);
                     function menuIconFunc(){
-                        $(this).toggleClass('active');
+                        if(idx==0){
+                            $(this).addClass('active');
+                            $('.inner-menuBox').addClass('on');
+                            $('span.cart').fadeOut();
+                            $('.header').css({background:'#000'});
+                            $('.menuBox').animate({top:'44px'},1000);
+                            idx++;
+                        }else{
+                            $(this).removeClass('active');
+                            $('.inner-menuBox').removeClass('on');
+                            $('.menuBox').animate({top:'-100%'},1000);
+                            $('.header').css({background:'#333'});
+                            $('span.cart').delay(1000).fadeIn();
+                            idx=0;
+                        }
                     }
+                    
+                    //모바일사이즈 search 제어
+                    $('.menuBox-search>input').on('click', function(){
+                        $(this).animate({width:'80%'});
+                        $('.menuBox').animate({top:'0'},500);
+                        $('.inner-menuBox').removeClass('on');
+                        $('.inner-searchBox').addClass('on');
+                        $('span.cancle').css({display:'block'});
+                    });
+
+                    $('span.cancle').on('click',function(){
+                        $('.menuBox').animate({top:'44px'},500);
+                        $('.menuBox-search>input').animate({width:'95%'});
+                        $('.inner-menuBox').addClass('on');
+                        $('.inner-searchBox').removeClass('on');
+                        $('span.cancle').css({display:'none'});
+
+                    })
                 </script>
 
                 <div class="gnb">
@@ -96,33 +145,36 @@
         </div>
         <script>
             //searchBtn 클릭시
-            var search_Btn=document.getElementsByClassName('search')[0];
-            var search_Area=document.getElementsByClassName('search-area')[0];
-            var search_innerArea=document.getElementsByClassName('inner-area')[0];
-            var header=document.getElementsByClassName('header')[0];
-            var span_cart=document.querySelector('span.cart');
-            var h1_logo=document.querySelector('h1.logo');
-            var gnb=document.getElementsByClassName('gnb')[0];
-
-            search_Btn.addEventListener('click', searchFunc);
+            var searchBtn=$('.search');
+            var search_Area=$('.search-area');
+            var search_innerArea=$('.inner-area');
+            var header=$('.header');
+            var cart=$('span.cart');
+            var logo=$('h1.logo');
+            var gnb=$('.gnb');
+            
+            searchBtn.on('click', searchFunc);
             function searchFunc(){
-                search_Area.style.opacity='1';
-                search_innerArea.style.right='50%';
-                header.style.background='#000';
-                span_cart.style.opacity='0';
-                h1_logo.style.opacity='0';
-                gnb.style.opacity='0';
+                search_Area.fadeIn();
+                search_innerArea.animate({right:'50%'});
+                header.css({background:'#000'});
+                cart.css({opacity:'0'});
+                gnb.css({opacity:'0'});
+                logo.css({opacity:'0'});
             }
-            var search_close=document.getElementsByClassName('search-close-btn')[0];
-            search_close.addEventListener('click',searchCloseFunc);
+
+            var search_close=$('.search-close-btn');
+            search_close.on('click', searchCloseFunc);
             function searchCloseFunc(){
-                search_Area.style.opacity='0';
-                search_innerArea.style.right='-100%';
-                header.style.background='#333';
-                span_cart.style.opacity='1';
-                h1_logo.style.opacity='1';
-                gnb.style.opacity='1';
+                search_innerArea.animate({right:'-100%'},function(){
+                    search_Area.fadeOut();
+                    header.css({background:'#333'});
+                    cart.css({opacity:'1'});
+                    gnb.css({opacity:'1'});
+                    logo.css({opacity:'1'});
+                });
             }
+            
         </script>
         <div class="container">
            <div class="inner-container">
