@@ -7,6 +7,7 @@
     <title>apple (대한민국)</title>
     <link rel="stylesheet" href="css/apple.css">
     <link rel="stylesheet" href="css/commons/reset.css">
+    <link rel="icon" href="img/favicon/favicon.png" type="image/png">
 </head>
 <body>
     <div id="wrap">
@@ -14,7 +15,7 @@
             <div class="inner-header">
                 <h1 class="logo">
                     <a href="#">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="img/header/logo.png" alt="logo">
                     </a>
                 </h1>
                 <div class="menu">
@@ -52,47 +53,7 @@
                         </ul>
                     </div>
                 </div>
-                <script>
-
-                    //모바일사이즈 menuToggle 제어
-                    var idx=0;
-                    $('.menu-trigger').on('click', menuIconFunc);
-                    function menuIconFunc(){
-                        if(idx==0){
-                            $(this).addClass('active');
-                            $('.inner-menuBox').addClass('on');
-                            $('span.cart').fadeOut();
-                            $('.header').css({background:'#000'});
-                            $('.menuBox').animate({top:'44px'},1000);
-                            idx++;
-                        }else{
-                            $(this).removeClass('active');
-                            $('.inner-menuBox').removeClass('on');
-                            $('.menuBox').animate({top:'-100%'},1000);
-                            $('.header').css({background:'#333'});
-                            $('span.cart').delay(1000).fadeIn();
-                            idx=0;
-                        }
-                    }
-                    
-                    //모바일사이즈 search 제어
-                    $('.menuBox-search>input').on('click', function(){
-                        $(this).animate({width:'80%'});
-                        $('.menuBox').animate({top:'0'},500);
-                        $('.inner-menuBox').removeClass('on');
-                        $('.inner-searchBox').addClass('on');
-                        $('span.cancle').css({display:'block'});
-                    });
-
-                    $('span.cancle').on('click',function(){
-                        $('.menuBox').animate({top:'44px'},500);
-                        $('.menuBox-search>input').animate({width:'95%'});
-                        $('.inner-menuBox').addClass('on');
-                        $('.inner-searchBox').removeClass('on');
-                        $('span.cancle').css({display:'none'});
-
-                    })
-                </script>
+                <script type="text/javascript" src="js/commons/header-mobile.js"></script>
 
                 <div class="gnb">
                     <ul>
@@ -103,13 +64,13 @@
                         <li><a href="#">Music</a></li>
                         <li><a href="#">고객지원</a></li>
                         <li class="search">
-                            <img src="img/gnb-search.png" alt="search">
+                            <img src="img/header/gnb-search.png" alt="search">
                         </li>
                     </ul>
                 </div>
                 <span class="cart">
                     <a href="#">
-                        <img src="img/header-cart.png" alt="cart">
+                        <img src="img/header/header-cart.png" alt="cart">
                     </a>
                  </span>
             </div>
@@ -143,39 +104,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            //searchBtn 클릭시
-            var searchBtn=$('.search');
-            var search_Area=$('.search-area');
-            var search_innerArea=$('.inner-area');
-            var header=$('.header');
-            var cart=$('span.cart');
-            var logo=$('h1.logo');
-            var gnb=$('.gnb');
-            
-            searchBtn.on('click', searchFunc);
-            function searchFunc(){
-                search_Area.fadeIn();
-                search_innerArea.animate({right:'50%'});
-                header.css({background:'#000'});
-                cart.css({opacity:'0'});
-                gnb.css({opacity:'0'});
-                logo.css({opacity:'0'});
-            }
-
-            var search_close=$('.search-close-btn');
-            search_close.on('click', searchCloseFunc);
-            function searchCloseFunc(){
-                search_innerArea.animate({right:'-100%'},function(){
-                    search_Area.fadeOut();
-                    header.css({background:'#333'});
-                    cart.css({opacity:'1'});
-                    gnb.css({opacity:'1'});
-                    logo.css({opacity:'1'});
-                });
-            }
-            
-        </script>
+        <script type="text/javascript" src="js/commons/header-search.js"></script>
         <div class="container">
            <div class="inner-container">
             <div class="section sec1">
@@ -223,7 +152,7 @@
                     </li>
                     <li>
                         <div class="sec5-02">
-                            <h4><img src="img/logo_hover.png" alt="logo">WWDC20<br>
+                            <h4><img src="img/contents/section05/logo-white.png" alt="logo">WWDC20<br>
                             6월 22일 전격개막.</h4>
                             <h6>(태평양 표준시 기준)</h6>
                             <h5>최초로 온라인상에서 진행되는 올해 WWDC에 전 세계<br> 개발자 여러분을 초대합니다.</h5>
@@ -232,7 +161,7 @@
                     </li>
                     <li>
                         <div class="sec5-03">
-                            <h4><img src="img/logo-black.png" alt="logo">WATCH</h4>
+                            <h4><img src="img/contents/section05/logo-black.png" alt="logo">WATCH</h4>
                             <h5>SERIES 5</h5>
                             <h6>새로운 상시표시형 Retina 디스플레이.</h6>
                             <span class="pointTxt">더 알아보기 ></span>
@@ -391,7 +320,7 @@
                             </ul>
                         </div>
                         <div class="country">
-                           <span><img src="img/footer-lan.png" alt="korea">
+                           <span><img src="img/footer/footer-lan.png" alt="korea">
                             대한민국</span>
                         </div>
                     </div>

@@ -69,7 +69,7 @@
 .container .inner-container .section.sec2{
     width: 100%;
     height: 700px;
-    background: url(../img/section2_bg.jpg) no-repeat 50%;
+    background: url(../img/contents/section02/section2_bg.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -101,7 +101,7 @@
 .container .inner-container .section.sec3{
     width: 100%;
     height: 700px;
-    background-image: url(../img/section3_bg.jpg);
+    background-image: url(../img/contents/section03/section3_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
@@ -135,7 +135,7 @@
 .container .inner-container .section.sec4{
     width: 100%;
     height: 700px;
-    background-image: url(../img/section4_bg.jpg);
+    background-image: url(../img/contents/section04/section4_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
@@ -193,7 +193,7 @@
 
 /*container : section5 : 1번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(1){
-    background: url(../img/section5_bg01.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg01.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -224,7 +224,7 @@
 
 /*container : section5 : 2번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(2){
-    background: url(../img/section5_bg02.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg02.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -260,7 +260,7 @@
 
 /*container : section5 : 3번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(3){
-    background: url(../img/section5_bg03.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg03.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -296,7 +296,7 @@
 
 /*container : section5 : 4번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(4){
-    background: url(../img/section5_bg04.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg04.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -320,7 +320,7 @@
 
 /*container : section5 : 5번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(5){
-    background: url(../img/section5_bg05.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg05.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -357,7 +357,7 @@
 
 /*container : section6 : 6번*/
 .container .inner-container .section.sec5 >ul >li:nth-child(6){
-    background: url(../img/section5_bg06.jpg) no-repeat 50%;
+    background: url(../img/contents/section05/section5_bg06.jpg) no-repeat 50%;
     background-size: cover;
 }
 
@@ -411,7 +411,7 @@
     }
     
     .container .inner-container .section.sec2{
-        background: url(../img/section2-1_bg.jpg) no-repeat 50%;
+        background: url(../img/contents/section02/section2-1_bg.jpg) no-repeat 50%;
         background-size: cover;
     }
     
@@ -431,7 +431,7 @@
     } 
     
     .container .inner-container .section.sec3{
-        background: url(../img/section3-1_bg.jpg) no-repeat 50%;
+        background: url(../img/contents/section03/section3-1_bg.jpg) no-repeat 50%;
         background-size: cover;
     }
     
@@ -448,7 +448,7 @@
     }
  
     .container .inner-container .section.sec4{
-        background: url(../img/section4-1_bg.jpg) no-repeat;
+        background: url(../img/contents/section04/section4-1_bg.jpg) no-repeat;
         background-position: center;
         background-size: cover;
     }
